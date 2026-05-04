@@ -14888,29 +14888,31 @@ var Fn = t((e) => {
         [i, a] = (0, d.useState)(``),
         [o, s] = (0, d.useState)(``),
         c = async () => {
-          let { data: e } = await M.get(`http://localhost:3000/notes`);
+          let { data: e } = await M.get(
+            `https://online-notes-k3bv.onrender.com/notes`,
+          );
           t(e.notes);
         },
         l = async (e) => {
           (e.preventDefault(),
             !n.value && !n.id
-              ? await M.post(`http://localhost:3000/notes`, {
+              ? await M.post(`https://online-notes-k3bv.onrender.com/notes`, {
                   title: i,
                   description: o,
                 })
               : n.value &&
                 n.id &&
-                (await M.patch(`http://localhost:3000/notes/${n.id}`, {
-                  title: i,
-                  description: o,
-                }),
+                (await M.patch(
+                  `https://online-notes-k3bv.onrender.com/notes/${n.id}`,
+                  { title: i, description: o },
+                ),
                 r({ value: !1, id: `` })),
             a(``),
             s(``),
             c());
         },
         u = async (e) => {
-          (await M.delete(`http://localhost:3000/notes/${e}`), c());
+          (await M.delete(`https://online-notes-k3bv.onrender.com/${e}`), c());
         },
         f = async (e) => {
           (s(e.description), a(e.title), r({ value: !0, id: e._id }));
