@@ -14912,7 +14912,8 @@ var Fn = t((e) => {
             c());
         },
         u = async (e) => {
-          (await M.delete(`https://online-notes-k3bv.onrender.com/${e}`), c());
+          (await M.delete(`https://online-notes-k3bv.onrender.com/notes/${e}`),
+            c());
         },
         f = async (e) => {
           (s(e.description), a(e.title), r({ value: !0, id: e._id }));
