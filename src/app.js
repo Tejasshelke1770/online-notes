@@ -1,7 +1,7 @@
 import express from "express";
-import { noteRouter } from "./routes/note.route.js";
 import cors from "cors";
 import path from "path";
+import { noteRouter } from "./routes/note.route.js";
 import { fileURLToPath } from "url";
 
 const app = express();
