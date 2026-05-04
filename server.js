@@ -5,6 +5,6 @@ import { connectToDB } from "./src/config/database.js";
 configDotenv();
 connectToDB();
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("server stared at port 3000");
 });
